@@ -40,58 +40,10 @@ describe('VideoDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      /*imports      : [
-        HttpModule,
-        RouterModule.forRoot(
-            [
-                {
-                    path      : '',
-                    component : VideoDetailsComponent
-                }
-            ] )
-      ],
-      declarations: [ VideoDetailsComponent ],
-      providers    : [
-        YouTubeApiService,
-        BaseRequestOptions,
-        MockBackend,
-        {
-            provide: Http,
-            useFactory: function ( backend : MockBackend, defaultOptions : BaseRequestOptions ) {
-                return new Http( backend, defaultOptions );
-            },
-            deps: [ MockBackend, BaseRequestOptions ]
-        },
-        {
-            provide: APP_BASE_HREF,
-            useValue: '/'
-        },
-        {
-            provide: ActivatedRoute,
-            useValue: {
-                params: Observable.of( { versionId : '1' } ),
-                parent: {
-                    params: Observable.of( { uniqueId : '1234' } )
-                }
-            }
-        }
-    ]*/
     declarations: [ VideoDetailsComponent ],
     providers: [
         YouTubeApiService,
         Http, BaseRequestOptions,
-        /*{
-          provide: ActivatedRoute,
-          useValue: {
-            params: Observable.of({itemId: 123})
-          }
-        },
-        {
-          provide: Router,
-          useValue: {
-            params: Observable.of({itemId: 123})
-          }
-        },*/
         { provide: ActivatedRoute, useValue: activeRoute },
         { provide: Router, useClass: MockRouter },
         MockBackend,
