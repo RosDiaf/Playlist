@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>My YouTube playlist</h1>
+  <div class="item-container clearfix" *ngFor="let list of videoList?.items; let i = index;" id=item_{{i}}>
+    <div *ngIf="list?.snippet?.title !== 'Deleted video'">
+      <div class="item-media">
+        <img src="{{list?.snippet?.thumbnails?.high.url}}" alt="" *ngIf="list?.snippet?.thumbnails?.high.url" class="animated fadeIn" />
+      </div>
+      <div class="item-description">
+        <h2><a routerLink="/video-details/" [queryParams]="{itemId:list.id}" class="hvr-sweep-to-right">{{list?.snippet?.title}}</a></h2>
+        <p class="published">Published on {{list?.snippet?.publishedAt | date}}</p>
+        <p class="description">{{ (list?.snippet?.description.length > 160)? (list?.snippet?.description | slice:0:160)+'...':(list?.snippet?.description) }}</p>
+      </div>
+    </div>
+  </div>
+</div>

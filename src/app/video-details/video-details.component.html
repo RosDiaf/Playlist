@@ -1,0 +1,19 @@
+<div class="container">
+  <a routerLink="">< Back to list of videos</a>
+  <div class="item-container clearfix" *ngFor="let list of videoList?.items; let i = index;">
+    <div *ngIf="itemId === list?.id">
+      <div class="video-details">
+        <h2>{{list?.snippet?.title}}</h2>
+        <p class="published">Published on {{list?.snippet?.publishedAt | date}}</p>
+      </div>
+      <div class="item-media">
+          <div class="video-responsive">
+            <iframe width="480" height="360" [src]="safeURL" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="item-description">
+        <p class="description">{{list?.snippet?.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
