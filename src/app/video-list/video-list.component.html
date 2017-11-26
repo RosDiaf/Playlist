@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>My YouTube playlist</h1>
+  <h1 class="header">My YouTube playlist</h1>
   <div class="item-container clearfix" *ngFor="let list of videoList?.items; let i = index;" id=item_{{i}}>
     <div *ngIf="list?.snippet?.title !== 'Deleted video'">
       <div class="item-media">
