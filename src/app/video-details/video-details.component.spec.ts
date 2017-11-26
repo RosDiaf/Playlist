@@ -69,7 +69,7 @@ describe('VideoDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should remove id number from url', inject([Router],(router:Router) => {
+  it('should remove id number from url', inject([Router], (router: Router) => {
     const spyRouter = spyOn(router, 'navigateByUrl');
     const url = spyRouter.calls.first().args[0];
     expect(url).toBe('/video-details');

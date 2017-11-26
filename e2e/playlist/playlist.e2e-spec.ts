@@ -55,7 +55,7 @@ describe('Playlist Content Page', function() {
     page.navigateTo('/');
     expect(page.getParagraphText('#item_2 a')).toBe('Blue Foundation - Eyes On Fire');
     expect(page.getParagraphText('#item_2 .published')).toBe('Published on Sep 4, 2014');
-    expect(page.getParagraphText('#item_2 .description')).toContain('Lyrics to "Eyes On Fire" song by Blue Foundation. Buy Blue Foundation "In My Mind I Am Free" ');
+    expect(page.getParagraphText('#item_2 .description')).toContain('Lyrics to "Eyes On Fire" song by Blue Foundation.');
     expect(page.getVideoImage('#item_2 img')).toEqual('https://i.ytimg.com/vi/8IHFVn0sv14/hqdefault.jpg');
   });
 
@@ -102,7 +102,7 @@ describe('Playlist Content Page', function() {
     page.navigateTo('/');
     expect(page.getParagraphText('#item_9 a')).toBe('Massive Attack - Paradise Circus');
     expect(page.getParagraphText('#item_9 .published')).toBe('Published on Sep 4, 2014');
-    expect(page.getParagraphText('#item_9 .description')).toContain('The new single from Massive Attack. From their latest album Heligoland');
+    expect(page.getParagraphText('#item_9 .description')).toContain('The new single from Massive Attack. From their latest');
     expect(page.getVideoImage('#item_9 img')).toEqual('https://i.ytimg.com/vi/jEgX64n3T7g/hqdefault.jpg');
   });
 
@@ -117,7 +117,7 @@ describe('Playlist Content Page', function() {
 
     it('should navigate to video details page by clicking on the title link', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(0);
+      const navLink = page.getAllElements('a').get(0);
       navLink.click();
       expect(page.getElement('app-root .item-container').isDisplayed()).toBeTruthy();
       expect(page.getElement('app-root .video-details').isDisplayed()).toBeTruthy();
@@ -131,7 +131,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 1 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(0);
+      const navLink = page.getAllElements('a').get(0);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -142,29 +142,29 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 2 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(1);
+      const navLink = page.getAllElements('a').get(1);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
       expect(page.getParagraphText('app-root h2')).toBe('Massive Attack - Teardrop');
       expect(page.getParagraphText('app-root .published')).toBe('Published on Sep 4, 2014');
-      expect(page.getParagraphText('app-root .description')).toContain('Discover more about this classic song and the Mezzanine album here: ');
+      expect(page.getParagraphText('app-root .description')).toContain('Discover more about this classic song and');
     });
 
     it('should display content for video 3 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(2);
+      const navLink = page.getAllElements('a').get(2);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
       expect(page.getParagraphText('app-root h2')).toBe('Blue Foundation - Eyes On Fire');
       expect(page.getParagraphText('app-root .published')).toBe('Published on Sep 4, 2014');
-      expect(page.getParagraphText('app-root .description')).toContain('Lyrics to "Eyes On Fire" song by Blue Foundation. Buy Blue Foundation');
+      expect(page.getParagraphText('app-root .description')).toContain('Lyrics to "Eyes On Fire" song by Blue Foundation.');
     });
 
     it('should display content for video 4 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(3);
+      const navLink = page.getAllElements('a').get(3);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -175,7 +175,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 5 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(4);
+      const navLink = page.getAllElements('a').get(4);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -185,7 +185,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 6 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(5);
+      const navLink = page.getAllElements('a').get(5);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -196,7 +196,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 7 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(6);
+      const navLink = page.getAllElements('a').get(6);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -207,7 +207,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 8 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(7);
+      const navLink = page.getAllElements('a').get(7);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
@@ -218,7 +218,7 @@ describe('Playlist Content Page', function() {
 
     it('should display content for video 9 details page', () => {
       page.navigateTo('/');
-      let navLink = page.getAllElements('a').get(8);
+      const navLink = page.getAllElements('a').get(8);
       navLink.click();
 
       expect(page.getParagraphText('app-root a')).toBe('< Back to list of videos');
